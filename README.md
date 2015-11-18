@@ -1,6 +1,8 @@
 # social-url
 
-Detects and parses user ids out of urls of well known social networks
+Detects and parses user ids out of urls of well known social networks.
+
+[![Circle CI](https://circleci.com/gh/Woorank/social-url.svg?style=svg)](https://circleci.com/gh/Woorank/social-url)
 
 ## Example:
 
