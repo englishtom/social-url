@@ -1,0 +1,31 @@
+{
+  "name": "social-url",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run mocha",
+    "mocha": "mocha -R spec ./test",
+    "watch:mocha": "npm run mocha -- -w",
+    "lint": "semistandard --verbose | snazzy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Woorank/social-url"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Woorank/social-url/issues"
+  },
+  "homepage": "https://github.com/Woorank/social-url",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "semistandard": "^7.0.3",
+    "snazzy": "^2.0.1"
+  }
+}
