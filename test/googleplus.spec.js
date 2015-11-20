@@ -12,13 +12,13 @@ describe('google plus', function () {
     assert.notStrictEqual(plus.network, 'Google+');
   });
 
-  function testPlus (url, user) {
-    return assertUtil.testNetwork('Google+', url, user);
+  function testPlus (url, user, expectedUrl) {
+    return assertUtil.testNetwork('Google+', url, user, expectedUrl);
   }
 
   testPlus('https://plus.google.com/103419843882610272894?test=1', '103419843882610272894');
   testPlus('https://plus.google.com/u/0/103419843882610272894/posts?t=1', '103419843882610272894');
-  testPlus('plus.google.com/+Intrafocus/posts', '+Intrafocus');
+  testPlus('plus.google.com/+Intrafocus/posts', '+Intrafocus', 'https://plus.google.com/+Intrafocus/posts');
   testPlus('https://plus.google.com/+Lamborghini', '+Lamborghini');
   testPlus('https://plus.google.com/+Lamborghini?some=stuff', '+Lamborghini');
   testPlus('https://plus.google.com/+Lamborghini#hash-fragment', '+Lamborghini');
@@ -26,7 +26,7 @@ describe('google plus', function () {
   testPlus('https://plus.google.com/Lamborghini/some/path', null);
   testPlus('https://plus.google.com/Lamborghini', null);
   testPlus('https://plus.google.com', null);
-  testPlus('plus.google.com/+Lamborghini', '+Lamborghini');
+  testPlus('plus.google.com/+Lamborghini', '+Lamborghini', 'https://plus.google.com/+Lamborghini');
   testPlus('https://plus.google.com/u/0/b/110689938472214097572/+Karstrider-canyoning', '+Karstrider-canyoning');
   testPlus('https://plus.google.com/u/0/+MundoipNet/about', '+MundoipNet');
 });

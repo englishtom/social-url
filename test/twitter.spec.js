@@ -5,8 +5,8 @@
 var assertUtil = require('./assertUtil');
 
 describe('twitter', function () {
-  function testTwitter (url, user) {
-    return assertUtil.testNetwork('Twitter', url, user);
+  function testTwitter (url, user, expectedUrl) {
+    return assertUtil.testNetwork('Twitter', url, user, expectedUrl);
   }
 
   testTwitter('https://twitter.com', null);
@@ -16,8 +16,8 @@ describe('twitter', function () {
   testTwitter('https://twitter.com/WOORANK', 'woorank');
   testTwitter('https://www.twitter.com/woorank', 'woorank');
   testTwitter('https://www.twitter.com/woorank/lists', 'woorank');
-  testTwitter('twitter.com/woorank', 'woorank');
-  testTwitter('www.twitter.com/woorank', 'woorank');
+  testTwitter('twitter.com/woorank', 'woorank', 'https://twitter.com/woorank');
+  testTwitter('www.twitter.com/woorank', 'woorank', 'https://www.twitter.com/woorank');
 
   assertUtil.testNotNetwork('https://not-twitter.com/woorank', 'Twitter');
 });
