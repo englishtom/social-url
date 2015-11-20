@@ -10,6 +10,7 @@ describe('facebook', function () {
   }
 
   testFacebook('https://www.facebook.com/my_page_id', 'my_page_id');
+  testFacebook('https://www.facebook.com/MY_PAGE_ID', 'MY_PAGE_ID');
   testFacebook('http://www.facebook.com/#!/my_page_id', 'my_page_id');
   testFacebook('//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fmy_page_id&amp;', 'my_page_id');
   testFacebook('http://www.facebook.com/pages/foo/Bar-Url/123456?v=app_555', '123456');
