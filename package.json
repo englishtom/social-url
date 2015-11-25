@@ -1,6 +1,6 @@
 {
   "name": "social-url",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "",
   "main": "lib",
   "directories": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "npm run lint && npm run mocha",
-    "mocha": "mocha -R spec ./test",
+    "mocha": "nyc mocha -R spec ./test",
     "watch:mocha": "npm run mocha -- -w",
     "lint": "semistandard --verbose | snazzy"
   },
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/Woorank/social-url",
   "devDependencies": {
     "mocha": "^2.3.4",
+    "nyc": "^3.2.2",
     "semistandard": "^7.0.3",
     "snazzy": "^2.0.1"
   }

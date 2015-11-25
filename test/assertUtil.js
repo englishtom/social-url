@@ -5,7 +5,7 @@
 var socialUrl = require('..');
 var assert = require('assert');
 
-function testNotNetwork (network, url) {
+function testNotNetwork (url, network) {
   it('shouldn\'t categorize "' + url + '" as "' + network + '"', function () {
     var parsed = socialUrl.parse(url);
     assert.notStrictEqual(parsed.network, network);
