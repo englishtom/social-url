@@ -9,6 +9,8 @@ describe('facebook', function () {
     return assertUtil.testNetwork('Facebook', url, user, expectedUrl);
   }
 
+  testFacebook('https://www.facebook.com/', null);
+
   testFacebook('https://www.facebook.com/my_page_id', 'my_page_id');
   testFacebook('https://www.facebook.com/MY_PAGE_ID', 'MY_PAGE_ID');
   testFacebook('http://www.facebook.com/#!/my_page_id', 'my_page_id');
