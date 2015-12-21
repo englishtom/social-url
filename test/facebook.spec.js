@@ -22,6 +22,8 @@ describe('facebook', function () {
   testFacebook('http://gb-en.facebook.com/123456', '123456');
   testFacebook('www.facebook.com/pages/123456', '123456', 'https://www.facebook.com/pages/123456');
   testFacebook('facebook.com/pages/123456', '123456', 'https://facebook.com/pages/123456');
+  testFacebook('https://www.facebook.com/pages/Ch%C3%A2teau-du-Haut-Koenigsbourg/61160951629', '61160951629');
+  testFacebook('https://www.facebook.com/Rehabilitación-España-333019166875998/timeline/', '333019166875998');
 
   assertUtil.testNotNetwork('example.com', 'Facebook');
   assertUtil.testNotNetwork('https://example.com/page_id', 'Facebook');
