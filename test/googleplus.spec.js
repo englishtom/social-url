@@ -30,4 +30,5 @@ describe('google plus', function () {
   testPlus('https://plus.google.com/u/0/b/110689938472214097572/+Karstrider-canyoning', '+Karstrider-canyoning');
   testPlus('https://plus.google.com/u/0/+MundoipNet/about', '+MundoipNet');
   testPlus('https://plus.google.com/u/123/108208977490755594504/', '108208977490755594504');
+  testPlus('https://plus.google.com/+OpelBauerK%C3%B6ln', '+OpelBauerKöln');
 });
