@@ -1,4 +1,4 @@
-'use tsrict';
+'use strict';
 
 /* globals it */
 
