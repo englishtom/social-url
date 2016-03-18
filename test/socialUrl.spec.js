@@ -17,4 +17,16 @@ describe('socialUrl', function () {
   it('doesn\'t fail on non string input', function () {
     assert.strictEqual(socialUrl.parse({}).network, null);
   });
+
+  it('doesn\'t fail on empty string', function () {
+    assert.strictEqual(socialUrl.parse('#').network, null);
+  });
+
+  it('doesn\'t fail on #', function () {
+    assert.strictEqual(socialUrl.parse('#').network, null);
+  });
+
+  it('doesn\'t fail on hostnames without a .', function () {
+    assert.strictEqual(socialUrl.parse('http://hostname').network, null);
+  });
 });
