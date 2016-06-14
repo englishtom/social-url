@@ -19,6 +19,7 @@ describe('twitter', function () {
   testTwitter('twitter.com/woorank', 'woorank', 'https://twitter.com/woorank');
   testTwitter('www.twitter.com/woorank', 'woorank', 'https://www.twitter.com/woorank');
   testTwitter(' https://twitter.com/hocuto_srbija', 'hocuto_srbija', 'https://twitter.com/hocuto_srbija');
+  testTwitter('https://twitter.com/#!/DalbarInc', 'dalbarinc');
 
   assertUtil.testNotNetwork('https://not-twitter.com/woorank', 'Twitter');
 });
