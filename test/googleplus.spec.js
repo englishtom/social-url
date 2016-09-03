@@ -32,4 +32,5 @@ describe('google plus', function () {
   testPlus('https://plus.google.com/u/123/108208977490755594504/', '108208977490755594504');
   testPlus('https://plus.google.com/+OpelBauerK%C3%B6ln', '+OpelBauerKöln');
   testPlus('https://www.google.com/+ServeratworkLLC', '+ServeratworkLLC');
+  testPlus('https://plus.google.com/u/0/b/109664828021327038088/109664828021327038088/about?gmbpt=true&hl=en', '109664828021327038088');
 });
